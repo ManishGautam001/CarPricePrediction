@@ -13,16 +13,12 @@
   <title>CarDekho</title>
 </head>
 <style>
-    .button123{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 1rem;
-    }
+  .button123 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
-
-
-
 
 <body>
 
@@ -39,19 +35,12 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
   </nav>
-  
-  <h2 class="text-center mt-1"><span class="badge badge-pill badge-dark">Car Price Predictor</span></h2>
-  
 
 
   <div class="container">
-    
+    <h2 class="text-center mt-3">Car Price Predictor</h2>
 
     <form action="{{ url_for('predict')}}" method="POST">
       <div class="form-group">
@@ -59,7 +48,7 @@
         <input type="number" name="Years" class="form-control" id="first" placeholder="Enter number">
       </div>
       <div class="form-group">
-        <label for="exampleFormControlInput1">What is the showroom price in lakhs (integer number only)?</label>
+        <label for="exampleFormControlInput1">What is the showroom price (Lakhs) ?</label>
         <input name="Present_Price" class="form-control" id="second" placeholder="Enter showroom price">
       </div>
       <div class="form-group">
@@ -89,7 +78,7 @@
           <option value='1'>Individual</option>
         </select>
       </div>
-       <div class="form-group">
+      <div class="form-group">
         <label for="exampleFormControlSelect2">Transmission type?</label>
         <select class="form-control custom-select" name="Transmission" id="seven">
           <option value='0'>Manual</option>
@@ -97,17 +86,10 @@
         </select>
       </div>
       <div class="button123">
-                <button type="button" class="btn btn-primary">Check Price</button>
-            </div>
+        <button class="btn btn-primary mb-2">Submit</button>
+      </div>
     </form>
-    
-
-    <br><br>
-    <h3>{{ prediction_text }}</h3>
-
-
-  </div>
-      <!-- Footer -->
+    <!-- Footer -->
     <footer class="page-footer font-small black">
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">© 2020 Copyright:
@@ -116,6 +98,12 @@
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
+
+    <br><br>
+    <h3>{{ prediction_text }}</h3>
+
+
+  </div>
 
 
   <!-- Optional JavaScript; choose one of the two! -->
